@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="ps2_clk" source="Pin Planner" >
+		</pin>
+		<pin name="serial_data" source="Pin Planner" >
+		</pin>
+		<pin name="ps2_data" source="Pin Planner" >
+		</pin>
+		<pin name="ba" source="Pin Planner" >
+		</pin>
+		<pin name="bb" source="Pin Planner" >
+		</pin>
+		<pin name="bc" source="Pin Planner" >
+		</pin>
+		<pin name="bd" source="Pin Planner" >
+		</pin>
+		<pin name="be" source="Pin Planner" >
+		</pin>
+		<pin name="bf" source="Pin Planner" >
+		</pin>
+		<pin name="bg" source="Pin Planner" >
+		</pin>
+		<pin name="aa" source="Pin Planner" >
+		</pin>
+		<pin name="ab" source="Pin Planner" >
+		</pin>
+		<pin name="ac" source="Pin Planner" >
+		</pin>
+		<pin name="ad" source="Pin Planner" >
+		</pin>
+		<pin name="ae" source="Pin Planner" >
+		</pin>
+		<pin name="af" source="Pin Planner" >
+		</pin>
+		<pin name="ag" source="Pin Planner" >
+		</pin>
+		<pin name="a" source="Pin Planner" >
+		</pin>
+		<pin name="b" source="Pin Planner" >
+		</pin>
+		<pin name="c" source="Pin Planner" >
+		</pin>
+		<pin name="d" source="Pin Planner" >
+		</pin>
+		<pin name="e" source="Pin Planner" >
+		</pin>
+		<pin name="f" source="Pin Planner" >
+		</pin>
+		<pin name="g" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

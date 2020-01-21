@@ -1,0 +1,6 @@
+
+State Machine - |Terminal_Remoto|current_state
+Name current_state.sending current_state.wait_f0 current_state.wait_data 
+current_state.wait_data 0 0 0 
+current_state.wait_f0 0 1 1 
+current_state.sending 1 0 1 

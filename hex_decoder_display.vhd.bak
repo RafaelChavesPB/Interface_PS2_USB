@@ -1,0 +1,29 @@
+library ieee ;
+    use ieee.std_logic_1164.all ;
+    use ieee.numeric_std.all ;
+
+entity hex_to_display is
+    port(code:in std_logic_vector(3 downto 0);
+         display:out std_logic_vector(6 downto 0));
+end hex_to_display; 
+
+architecture arch of hex_to_display is
+begin  
+    with code(3 downto 0) select
+        display<=  "1111110" when x"0", -- 0
+                    "0110000" when x"1", -- 1
+                    "1101101" when x"2", -- 2
+                    "1111001" when x"3", -- 3
+                    "0110011" when x"4", -- 4
+                    "1011011" when x"5", -- 5
+                    "1011111" when x"6", -- 6
+                    "1110000" when x"7", -- 7
+                    "1111111" when x"8", -- 8
+                    "1110011" when x"9", -- 9
+                    "1110111" when x"A", -- a
+                    "0011111" when x"B", -- b
+                    "1001110" when x"C", -- c
+                    "0111101" when x"D", -- d
+                    "1001111" when x"E", -- e
+						  "1000111" when x"F"; -- f
+end architecture ;

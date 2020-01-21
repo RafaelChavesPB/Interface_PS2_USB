@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\rafae\Documents\Desenvolvimento\Terminal_Remoto\simulation\modelsim
+Ehex_decoder_display
+w1579031844
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\rafae\Documents\Desenvolvimento\Terminal_Remoto\simulation\modelsim
+8C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto/hex_decoder_display.vhd
+FC:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto/hex_decoder_display.vhd
+l0
+L5
+V]hb`Q59S=3FO36;1X5bWP2
+!s100 0UFC`U4=4gjQiICo<g5>>3
+Z5 OV;C;10.1d;51
+31
+!i10b 1
+!s108 1579031871.104000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto/hex_decoder_display.vhd|
+!s107 C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto/hex_decoder_display.vhd|
+o-93 -work work -O0
+Z6 tExplicit 1

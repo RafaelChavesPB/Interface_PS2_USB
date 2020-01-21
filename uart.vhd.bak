@@ -1,0 +1,48 @@
+library ieee ;
+    use ieee.std_logic_1164.all ;
+    use ieee.numeric_std.all ;
+
+entity uart is 
+	port(data:in std_logic_vector(7 downto 0);
+		  clk_50mhz,start:in std_logic;
+		  data_out: out std_logic);
+end entity;
+
+architecture arch of uart is
+	signal data_full: std_logic_vector(9 downto 0):=(others => '0');
+	signal index: integer 0 to 15 range:=0;
+	signal prscl: integer 0 to 5206 range:=0;
+	signal flag: std_logic:='0';
+begin
+	data_out <= data_full(index) when flag='1' else '1';
+	process(start)
+	begin
+		if(start='1') then 
+			flag<='1';
+			data_full(0):='0';
+			data_full(9):='1';
+			data_full(8 downto 1)<=data;
+			index<=0;
+		end if;
+	end process;
+	
+	process(clk_50mhz)
+	begin
+		if(clk_50mhz='0') then 
+			if(prscl<5206) then
+				prscl<=prscl+1;
+				if(prscl=2603) then 
+					if(index<9) then
+						index<=index+1;
+					else 
+						index<=0;
+						flag<=0;
+					end if;
+					
+				end if;
+			else 
+				prscl<=0;
+			end if;
+		end if;
+	end process;
+end arch;
