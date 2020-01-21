@@ -39,31 +39,38 @@ architecture arch of Terminal_Remoto is
 	signal ready:std_logic:='0';
 	signal start: std_logic:='0';
 	signal data:std_logic_vector(7 downto 0);
+	signal make:std_logic_vector(7 downto 0);
 	signal ascii_code:std_logic_vector(7 downto 0);
 	signal temp_a:std_logic_vector(6 downto 0);
 	signal temp_b:std_logic_vector(6 downto 0);
-	type state is (wait_data, wait_f0, sending);
-	signal current_state:state:=wait_data;
+	type state is (wait_make, wait_break, sending);
+	signal current_state:state:=wait_make;
 begin
 
-	ledg(0)<='1' when current_state=wait_data else '0';
-	ledg(1)<='1' when current_state=wait_f0 else '0';
+	ledg(0)<='1' when current_state=wait_make else '0';
+	ledg(1)<='1' when current_state=wait_break else '0';
 	ledg(2)<='1' when current_state=sending else '0';
 	
 	
 	
 	process(clk_50mhz)
-		variable alt_ready:std_logic_vector(1 downto 0):="00";
-		variable delay:integer range 0 to num:=0;
+		variable alt_ready:std_logic_vector(1 downto 0);
+		variable delay:integer range 0 to num;
+		variable flag:std_logic;
 	begin
 		if(clk_50mhz='0') then 
 			alt_ready:= alt_ready(0) & ready;	
 			if(alt_ready="01") then 				
-				if(current_state=wait_data and data/=x"F0") then
-					current_state<=wait_f0;
-				elsif (current_state=wait_f0 and data=x"F0") then
-					current_state<=sending;
-					start<='1';
+				if(current_state=wait_make and data/=x"F0") then
+					current_state<=wait_break;
+					flag:='0';
+				elsif (current_state=wait_break) then
+					if(flag='0') then
+						flag:='1';
+					else 
+						current_state<=sending;
+						start<='1';
+					end if;
 				end if;
 			end if;
 			if(current_state=sending) then
@@ -72,7 +79,8 @@ begin
 					else
 						display_a<=temp_a;
 						display_b<=temp_b;
-						current_state<=wait_data;
+						current_state<=wait_make;
+						make<=data;
 						start<='0';
 						delay:=0;
 					end if;
@@ -83,7 +91,7 @@ begin
 	ps2: data_receiver port map(serial_in,clk_ps2,ready,data);
 	decA:hex_decoder_display port map (ascii_code(7 downto 4),temp_a);
 	decB:hex_decoder_display port map (ascii_code(3 downto 0),temp_b);
-	ascii: ps2_decoder port map(data, ascii_code);
+	ascii: ps2_decoder port map(make, ascii_code);
 	serial: uart port map(ascii_code,clk_50mhz,start,serial_out);
 	
 	end arch; 

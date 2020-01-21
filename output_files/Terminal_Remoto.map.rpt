@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Terminal_Remoto
-Tue Jan 21 10:08:35 2020
+Tue Jan 21 11:07:34 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,13 +14,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Terminal_Remoto|current_state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |Terminal_Remoto
- 13. Parameter Settings for User Entity Instance: uart:serial
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Terminal_Remoto
+ 12. Parameter Settings for User Entity Instance: uart:serial
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -46,15 +45,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 21 10:08:35 2020           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 21 11:07:34 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Terminal_Remoto                                 ;
 ; Top-level Entity Name              ; Terminal_Remoto                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 173                                             ;
-;     Total combinational functions  ; 172                                             ;
-;     Dedicated logic registers      ; 77                                              ;
-; Total registers                    ; 77                                              ;
+; Total logic elements               ; 185                                             ;
+;     Total combinational functions  ; 176                                             ;
+;     Dedicated logic registers      ; 87                                              ;
+; Total registers                    ; 87                                              ;
 ; Total pins                         ; 26                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -177,28 +176,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 173       ;
+; Estimated Total logic elements              ; 185       ;
 ;                                             ;           ;
-; Total combinational functions               ; 172       ;
+; Total combinational functions               ; 176       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 101       ;
+;     -- 4 input functions                    ; 110       ;
 ;     -- 3 input functions                    ; 19        ;
-;     -- <=2 input functions                  ; 52        ;
+;     -- <=2 input functions                  ; 47        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 141       ;
+;     -- normal mode                          ; 145       ;
 ;     -- arithmetic mode                      ; 31        ;
 ;                                             ;           ;
-; Total registers                             ; 77        ;
-;     -- Dedicated logic registers            ; 77        ;
+; Total registers                             ; 87        ;
+;     -- Dedicated logic registers            ; 87        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 26        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk_50mhz ;
-; Maximum fan-out                             ; 64        ;
-; Total fan-out                               ; 818       ;
-; Average fan-out                             ; 2.97      ;
+; Maximum fan-out                             ; 74        ;
+; Total fan-out                               ; 874       ;
+; Average fan-out                             ; 3.02      ;
 +---------------------------------------------+-----------+
 
 
@@ -207,36 +206,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
 ; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
 +-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
-; |Terminal_Remoto              ; 172 (36)          ; 77 (39)      ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |Terminal_Remoto                          ; work         ;
+; |Terminal_Remoto              ; 176 (37)          ; 87 (48)      ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |Terminal_Remoto                          ; work         ;
 ;    |data_receiver:ps2|        ; 16 (16)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|data_receiver:ps2        ; work         ;
-;    |hex_decoder_display:decA| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|hex_decoder_display:decA ; work         ;
+;    |hex_decoder_display:decA| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|hex_decoder_display:decA ; work         ;
 ;    |hex_decoder_display:decB| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|hex_decoder_display:decB ; work         ;
-;    |ps2_decoder:ascii|        ; 56 (56)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|ps2_decoder:ascii        ; work         ;
-;    |uart:serial|              ; 51 (51)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|uart:serial              ; work         ;
+;    |ps2_decoder:ascii|        ; 58 (58)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|ps2_decoder:ascii        ; work         ;
+;    |uart:serial|              ; 51 (51)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|uart:serial              ; work         ;
 +-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------+
-; State Machine - |Terminal_Remoto|current_state                                                    ;
-+-------------------------+-----------------------+-----------------------+-------------------------+
-; Name                    ; current_state.sending ; current_state.wait_f0 ; current_state.wait_data ;
-+-------------------------+-----------------------+-----------------------+-------------------------+
-; current_state.wait_data ; 0                     ; 0                     ; 0                       ;
-; current_state.wait_f0   ; 0                     ; 1                     ; 1                       ;
-; current_state.sending   ; 1                     ; 0                     ; 1                       ;
-+-------------------------+-----------------------+-----------------------+-------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; uart:serial|data[5]                   ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; State Machine - |Terminal_Remoto|current_state                                                        ;
++--------------------------+-----------------------+--------------------------+-------------------------+
+; Name                     ; current_state.sending ; current_state.wait_break ; current_state.wait_make ;
++--------------------------+-----------------------+--------------------------+-------------------------+
+; current_state.wait_make  ; 0                     ; 0                        ; 0                       ;
+; current_state.wait_break ; 0                     ; 1                        ; 1                       ;
+; current_state.sending    ; 1                     ; 0                        ; 1                       ;
++--------------------------+-----------------------+--------------------------+-------------------------+
 
 
 +------------------------------------------------------+
@@ -244,12 +233,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 77    ;
+; Total registers                              ; 87    ;
 ; Number of registers using Synchronous Clear  ; 33    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 51    ;
+; Number of registers using Clock Enable       ; 60    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -259,10 +248,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Terminal_Remoto|data_receiver:ps2|reg[6]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Terminal_Remoto|data_receiver:ps2|reg[0]   ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Terminal_Remoto|data_receiver:ps2|count[3] ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Terminal_Remoto|uart:serial|index[2]       ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |Terminal_Remoto|current_state              ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Terminal_Remoto|current_state              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
@@ -301,7 +290,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 21 10:08:32 2020
+    Info: Processing started: Tue Jan 21 11:07:31 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Terminal_Remoto -c Terminal_Remoto
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file hex_decoder_display.vhd
@@ -333,13 +322,13 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ledg[7]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 208 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 219 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 182 logic cells
+    Info (21061): Implemented 193 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Tue Jan 21 10:08:35 2020
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Tue Jan 21 11:07:34 2020
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

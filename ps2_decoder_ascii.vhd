@@ -47,6 +47,7 @@ begin
                      x"38" when x"3E" , -- 8
                      x"39" when x"46" , -- 9
                      x"20" when x"29", -- space
-                     x"F0" when x"F0", -- Break
-                     x"3F" when others; -- ?
+                     x"0A" when x"0C", -- Enter
+							x"F0" when x"F0", -- Break
+							x"3F" when others; -- ?
 end architecture ;

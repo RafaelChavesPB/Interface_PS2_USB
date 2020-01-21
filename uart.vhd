@@ -28,9 +28,9 @@ begin
 						serial_out <=data(index-1);
 					else 
 						serial_out <='1';
-						if(start='1' and byte/=x"F0") then
+						if(start='1') then
 							data<=byte;
-							if(byte/=data and byte/=x"3F") then 
+							if(byte/=data and byte/=x"3F" and data/=x"F0") then 
 								index<=0;
 							end if;
 						end if;

@@ -4,7 +4,7 @@
 ; Hierarchy ; Input ; Constant Input ; Unused Input ; Floating Input ; Output ; Constant Output ; Unused Output ; Floating Output ; Bidir ; Constant Bidir ; Unused Bidir ; Input only Bidir ; Output only Bidir ;
 +-----------+-------+----------------+--------------+----------------+--------+-----------------+---------------+-----------------+-------+----------------+--------------+------------------+-------------------+
 ; serial    ; 10    ; 0              ; 0            ; 0              ; 1      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
-; ascii     ; 8     ; 1              ; 0            ; 1              ; 8      ; 1               ; 1             ; 1               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
+; ascii     ; 8     ; 0              ; 0            ; 0              ; 8      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; decB      ; 4     ; 0              ; 0            ; 0              ; 7      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; decA      ; 4     ; 0              ; 0            ; 0              ; 7      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; ps2       ; 2     ; 0              ; 0            ; 0              ; 9      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
