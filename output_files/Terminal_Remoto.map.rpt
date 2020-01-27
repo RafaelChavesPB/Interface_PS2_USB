@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Terminal_Remoto
-Tue Jan 21 11:07:34 2020
+Thu Jan 23 16:27:37 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,7 +17,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: Top-level Entity: |Terminal_Remoto
- 12. Parameter Settings for User Entity Instance: uart:serial
+ 12. Parameter Settings for User Entity Instance: uart:FPGA_RS232
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
 
@@ -45,15 +45,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 21 11:07:34 2020           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 23 16:27:37 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Terminal_Remoto                                 ;
 ; Top-level Entity Name              ; Terminal_Remoto                                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 185                                             ;
-;     Total combinational functions  ; 176                                             ;
-;     Dedicated logic registers      ; 87                                              ;
-; Total registers                    ; 87                                              ;
+; Total logic elements               ; 187                                             ;
+;     Total combinational functions  ; 186                                             ;
+;     Dedicated logic registers      ; 84                                              ;
+; Total registers                    ; 84                                              ;
 ; Total pins                         ; 26                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -158,17 +158,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
-; hex_decoder_display.vhd          ; yes             ; User VHDL File               ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - reborn/hex_decoder_display.vhd ;         ;
-; db/Terminal_Remoto.vhd           ; yes             ; Auto-Generated Megafunction  ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - reborn/db/Terminal_Remoto.vhd  ;         ;
-; data_receiver.vhd                ; yes             ; User VHDL File               ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - reborn/data_receiver.vhd       ;         ;
-; uart.vhd                         ; yes             ; User VHDL File               ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - reborn/uart.vhd                ;         ;
-; ps2_decoder_ascii.vhd            ; yes             ; User VHDL File               ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - reborn/ps2_decoder_ascii.vhd   ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; hex_decoder_display.vhd          ; yes             ; User VHDL File               ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - o retorno/hex_decoder_display.vhd ;         ;
+; db/Terminal_Remoto.vhd           ; yes             ; Auto-Generated Megafunction  ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - o retorno/db/Terminal_Remoto.vhd  ;         ;
+; data_receiver.vhd                ; yes             ; User VHDL File               ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - o retorno/data_receiver.vhd       ;         ;
+; uart.vhd                         ; yes             ; User VHDL File               ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - o retorno/uart.vhd                ;         ;
+; ps2_decoder_ascii.vhd            ; yes             ; User VHDL File               ; C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - o retorno/ps2_decoder_ascii.vhd   ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -176,43 +176,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 185       ;
+; Estimated Total logic elements              ; 187       ;
 ;                                             ;           ;
-; Total combinational functions               ; 176       ;
+; Total combinational functions               ; 186       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 110       ;
-;     -- 3 input functions                    ; 19        ;
-;     -- <=2 input functions                  ; 47        ;
+;     -- 4 input functions                    ; 117       ;
+;     -- 3 input functions                    ; 27        ;
+;     -- <=2 input functions                  ; 42        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 145       ;
-;     -- arithmetic mode                      ; 31        ;
+;     -- normal mode                          ; 158       ;
+;     -- arithmetic mode                      ; 28        ;
 ;                                             ;           ;
-; Total registers                             ; 87        ;
-;     -- Dedicated logic registers            ; 87        ;
+; Total registers                             ; 84        ;
+;     -- Dedicated logic registers            ; 84        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 26        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk_50mhz ;
-; Maximum fan-out                             ; 74        ;
-; Total fan-out                               ; 874       ;
-; Average fan-out                             ; 3.02      ;
+; Maximum fan-out                             ; 71        ;
+; Total fan-out                               ; 904       ;
+; Average fan-out                             ; 3.05      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
-; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
-; |Terminal_Remoto              ; 176 (37)          ; 87 (48)      ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |Terminal_Remoto                          ; work         ;
-;    |data_receiver:ps2|        ; 16 (16)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|data_receiver:ps2        ; work         ;
-;    |hex_decoder_display:decA| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|hex_decoder_display:decA ; work         ;
-;    |hex_decoder_display:decB| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|hex_decoder_display:decB ; work         ;
-;    |ps2_decoder:ascii|        ; 58 (58)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|ps2_decoder:ascii        ; work         ;
-;    |uart:serial|              ; 51 (51)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|uart:serial              ; work         ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+; |Terminal_Remoto                   ; 186 (47)          ; 84 (45)      ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |Terminal_Remoto                               ; work         ;
+;    |data_receiver:PS2_FPGA|        ; 16 (16)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|data_receiver:PS2_FPGA        ; work         ;
+;    |hex_decoder_display:Decoder_A| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|hex_decoder_display:Decoder_A ; work         ;
+;    |hex_decoder_display:Decoder_B| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|hex_decoder_display:Decoder_B ; work         ;
+;    |ps2_decoder:Decoder_ascii|     ; 58 (58)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|ps2_decoder:Decoder_ascii     ; work         ;
+;    |uart:FPGA_RS232|               ; 51 (51)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Terminal_Remoto|uart:FPGA_RS232               ; work         ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -233,45 +233,46 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 87    ;
-; Number of registers using Synchronous Clear  ; 33    ;
+; Total registers                              ; 84    ;
+; Number of registers using Synchronous Clear  ; 30    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 60    ;
+; Number of registers using Clock Enable       ; 57    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Terminal_Remoto|data_receiver:ps2|reg[0]   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Terminal_Remoto|data_receiver:ps2|count[3] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Terminal_Remoto|uart:serial|index[2]       ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Terminal_Remoto|current_state              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Terminal_Remoto|data_receiver:PS2_FPGA|reg[0]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Terminal_Remoto|data_receiver:PS2_FPGA|count[3] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Terminal_Remoto|uart:FPGA_RS232|index[2]        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Terminal_Remoto|buffer_uart[7]                  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Terminal_Remoto|current_state                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |Terminal_Remoto ;
-+----------------+---------+------------------------------------------------------+
-; Parameter Name ; Value   ; Type                                                 ;
-+----------------+---------+------------------------------------------------------+
-; num            ; 1000000 ; Signed Integer                                       ;
-+----------------+---------+------------------------------------------------------+
++----------------+--------+-------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                  ;
++----------------+--------+-------------------------------------------------------+
+; delay          ; 100000 ; Signed Integer                                        ;
++----------------+--------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart:serial ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; delay          ; 5208  ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:FPGA_RS232 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; delay          ; 5208  ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -290,7 +291,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 21 11:07:31 2020
+    Info: Processing started: Thu Jan 23 16:27:34 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Terminal_Remoto -c Terminal_Remoto
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file hex_decoder_display.vhd
@@ -310,10 +311,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file ps2_dec
     Info (12023): Found entity 1: ps2_decoder
 Info (12127): Elaborating entity "Terminal_Remoto" for the top level hierarchy
 Warning (10873): Using initial value X (don't care) for net "ledg[7..3]" at Terminal_Remoto.vhd(11)
-Info (12128): Elaborating entity "data_receiver" for hierarchy "data_receiver:ps2"
-Info (12128): Elaborating entity "hex_decoder_display" for hierarchy "hex_decoder_display:decA"
-Info (12128): Elaborating entity "ps2_decoder" for hierarchy "ps2_decoder:ascii"
-Info (12128): Elaborating entity "uart" for hierarchy "uart:serial"
+Info (12128): Elaborating entity "data_receiver" for hierarchy "data_receiver:PS2_FPGA"
+Info (12128): Elaborating entity "hex_decoder_display" for hierarchy "hex_decoder_display:Decoder_A"
+Info (12128): Elaborating entity "ps2_decoder" for hierarchy "ps2_decoder:Decoder_ascii"
+Info (12128): Elaborating entity "uart" for hierarchy "uart:FPGA_RS232"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ledg[3]" is stuck at GND
     Warning (13410): Pin "ledg[4]" is stuck at GND
@@ -322,13 +323,13 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ledg[7]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 219 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 221 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 193 logic cells
+    Info (21061): Implemented 195 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Tue Jan 21 11:07:34 2020
+    Info: Processing ended: Thu Jan 23 16:27:37 2020
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

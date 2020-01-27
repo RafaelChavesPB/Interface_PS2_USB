@@ -1,15 +1,8 @@
 |Terminal_Remoto
-serial_in => data_receiver:ps2.data_in
-clk_ps2 => data_receiver:ps2.clk
-clk_50mhz => uart:serial.clk_50mhz
-clk_50mhz => make[0].CLK
-clk_50mhz => make[1].CLK
-clk_50mhz => make[2].CLK
-clk_50mhz => make[3].CLK
-clk_50mhz => make[4].CLK
-clk_50mhz => make[5].CLK
-clk_50mhz => make[6].CLK
-clk_50mhz => make[7].CLK
+serial_in => data_receiver:PS2_FPGA.data_in
+clk_ps2 => data_receiver:PS2_FPGA.clk
+clk_50mhz => uart:FPGA_RS232.clk_50mhz
+clk_50mhz => start_sending.CLK
 clk_50mhz => display_b[0]~reg0.CLK
 clk_50mhz => display_b[1]~reg0.CLK
 clk_50mhz => display_b[2]~reg0.CLK
@@ -24,27 +17,31 @@ clk_50mhz => display_a[3]~reg0.CLK
 clk_50mhz => display_a[4]~reg0.CLK
 clk_50mhz => display_a[5]~reg0.CLK
 clk_50mhz => display_a[6]~reg0.CLK
-clk_50mhz => start.CLK
-clk_50mhz => delay[0].CLK
-clk_50mhz => delay[1].CLK
-clk_50mhz => delay[2].CLK
-clk_50mhz => delay[3].CLK
-clk_50mhz => delay[4].CLK
-clk_50mhz => delay[5].CLK
-clk_50mhz => delay[6].CLK
-clk_50mhz => delay[7].CLK
-clk_50mhz => delay[8].CLK
-clk_50mhz => delay[9].CLK
-clk_50mhz => delay[10].CLK
-clk_50mhz => delay[11].CLK
-clk_50mhz => delay[12].CLK
-clk_50mhz => delay[13].CLK
-clk_50mhz => delay[14].CLK
-clk_50mhz => delay[15].CLK
-clk_50mhz => delay[16].CLK
-clk_50mhz => delay[17].CLK
-clk_50mhz => delay[18].CLK
-clk_50mhz => delay[19].CLK
+clk_50mhz => buffer_uart[0].CLK
+clk_50mhz => buffer_uart[1].CLK
+clk_50mhz => buffer_uart[2].CLK
+clk_50mhz => buffer_uart[3].CLK
+clk_50mhz => buffer_uart[4].CLK
+clk_50mhz => buffer_uart[5].CLK
+clk_50mhz => buffer_uart[6].CLK
+clk_50mhz => buffer_uart[7].CLK
+clk_50mhz => count[0].CLK
+clk_50mhz => count[1].CLK
+clk_50mhz => count[2].CLK
+clk_50mhz => count[3].CLK
+clk_50mhz => count[4].CLK
+clk_50mhz => count[5].CLK
+clk_50mhz => count[6].CLK
+clk_50mhz => count[7].CLK
+clk_50mhz => count[8].CLK
+clk_50mhz => count[9].CLK
+clk_50mhz => count[10].CLK
+clk_50mhz => count[11].CLK
+clk_50mhz => count[12].CLK
+clk_50mhz => count[13].CLK
+clk_50mhz => count[14].CLK
+clk_50mhz => count[15].CLK
+clk_50mhz => count[16].CLK
 clk_50mhz => flag.CLK
 clk_50mhz => alt_ready[0].CLK
 clk_50mhz => current_state~1.DATAIN
@@ -62,7 +59,7 @@ display_b[3] << display_b[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 display_b[4] << display_b[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 display_b[5] << display_b[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 display_b[6] << display_b[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-serial_out <= uart:serial.serial_out
+serial_out <= uart:FPGA_RS232.serial_out
 ledg[0] <= ledg[0].DB_MAX_OUTPUT_PORT_TYPE
 ledg[1] <= ledg[1].DB_MAX_OUTPUT_PORT_TYPE
 ledg[2] <= ledg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -73,7 +70,7 @@ ledg[6] <= <GND>
 ledg[7] <= <GND>
 
 
-|Terminal_Remoto|data_receiver:ps2
+|Terminal_Remoto|data_receiver:PS2_FPGA
 data_in => reg.DATAB
 clk => ready~reg0.CLK
 clk => reg[0].CLK
@@ -99,7 +96,7 @@ data_out[6] <= reg[6].DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= reg[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Terminal_Remoto|hex_decoder_display:decA
+|Terminal_Remoto|hex_decoder_display:Decoder_A
 code[0] => Mux0.IN19
 code[0] => Mux1.IN19
 code[0] => Mux2.IN19
@@ -137,7 +134,7 @@ display[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 display[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Terminal_Remoto|hex_decoder_display:decB
+|Terminal_Remoto|hex_decoder_display:Decoder_B
 code[0] => Mux0.IN19
 code[0] => Mux1.IN19
 code[0] => Mux2.IN19
@@ -175,7 +172,7 @@ display[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 display[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Terminal_Remoto|ps2_decoder:ascii
+|Terminal_Remoto|ps2_decoder:Decoder_ascii
 key_code[0] => Mux0.IN263
 key_code[0] => Mux1.IN263
 key_code[0] => Mux2.IN263
@@ -250,7 +247,7 @@ ascii_code[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 ascii_code[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Terminal_Remoto|uart:serial
+|Terminal_Remoto|uart:FPGA_RS232
 byte[0] => Equal2.IN7
 byte[0] => data.DATAB
 byte[0] => Equal3.IN7

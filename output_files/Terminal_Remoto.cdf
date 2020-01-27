@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - reborn/output_files/") File("Terminal_Remoto.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("C:/Users/rafae/Documents/Desenvolvimento/Terminal_Remoto - o retorno/output_files/") File("Terminal_Remoto.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
