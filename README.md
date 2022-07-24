@@ -25,7 +25,7 @@ Linguagens:
 
 Teclado PS2 -> FPGA [PS2 Receiver - ASCII Converter - RS232 sender] -> Computador [Putty]
 
-<h2> Blocos construido em VHDL </h2>
+<h2> Blocos construidos em VHDL </h2>
 
 PS2 Receiver:
 
